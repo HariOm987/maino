@@ -1,0 +1,195 @@
+<html>
+<head>
+  <title>MAINO</title>
+  <style>
+    
+*{
+    margin:0px;
+    padding:0px;
+  }
+  .frame1{
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg, #EC52B0 0%, #9D45C0 39.49%, #4D2CB7 69.28%, #0E21A1 100%);
+  }
+  .logo{
+   padding:30px;
+  color: #FFF;
+  text-align: center;
+  font-family: Major Mono Display;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+  .frame2{
+    margin-left:120px;
+    margin-right:40px;
+    width: 75%;
+  height: 75rem;
+ 
+    background: rgba(217, 217, 217, 0.39);
+    margin-top:120px;
+    border-radius:30px;
+  }
+  form{
+    padding:24px;
+    margin-left: 45px;
+    
+  }
+  .reg{
+    color: #FFF;
+font-family: Inria Sans;
+font-size: 100px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+  }
+.signin{
+    color: #FFF;
+    font-family: Inria Sans;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  #lname{
+    
+    display: flex;
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  align-items: center;
+  gap: 100px;
+  flex-shrink: 0;
+    border-radius:20px;
+    border-style: solid;
+    border-width:0.2px;
+    outline:none;
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  #fname{
+    display: flex;
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  align-items: center;
+  gap: 100px;
+  flex-shrink: 0;
+    border-radius:20px;
+    border-style: solid;
+    border-width:0.2px;
+    outline:none;
+    font-size: 40px;
+    margin-top: 80px;
+    margin-left: -10px;
+
+  }
+  .name{
+    display: flex;
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  align-items: center;
+  gap: 100px;
+  flex-shrink: 0;
+    border-radius:20px;
+    border-style: solid;
+    border-width:0.2px;
+    outline:none;
+    font-size: 40px;
+    margin-top:80px;
+  }
+  .sign{
+    border-radius: 90px;
+  background: #0E21A1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding:9px;
+    width:500px;
+    height:80px;
+    color:white;
+    font-size:15px;
+    text-align:center;
+    border-style:solid;
+    border-width:0px;
+    font-family: Inria Sans;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+    margin-left:110px;
+    margin-right:90px;
+    margin-top: 40px;
+  }
+  .frame3{
+    margin-top:20px;
+    text-align:center;
+    width: 72%;
+  height: 75px;
+  flex-shrink: 0;
+    border-radius: 45px;
+  background: rgba(217, 217, 217, 0.39);
+    margin-left:130px;
+    margin-top: 40px;
+  }
+  .already{
+      margin-top: 100px;
+    font-size: 40px;
+    padding:10px;
+    color:white;
+   
+  }
+  a{
+    font-weight:bold;
+    color:white;
+  }
+
+.frame4{
+    margin-top:200px;
+    text-align:center;
+    width: 72%;
+  height: 40%;
+  flex-shrink: 0;
+    border-radius: 45px;
+  background: rgba(217, 217, 217, 0.39);
+    margin-left:130px;
+   
+}
+.email{
+    margin-top:40px;
+}
+p{
+    margin-top: 70px;
+}
+
+  </style>
+  <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+</head>
+<body>
+  <div class="frame1">
+    <div class="logo">mAIno</div>
+    <div class="frame4">
+      <div class="signin"><p>Sign In</p></div>
+      <form method="post">
+        {% csrf_token %}
+  <input type="text" class="email" id="fname" name="name" placeholder="Username"><br>
+   
+   <input type="password" id="fname" name="pass" placeholder="Password"><br>
+
+      <button class="sign">
+       Sign in
+      </button>
+
+    </form> 
+
+    </div>
+    <div class="frame3">
+     <div class="already" >Do not have an account? <a href="{% url 'signup' %}">Sign up</a><div>
+    </div>
+  </div>
+</body>
+    </html>
